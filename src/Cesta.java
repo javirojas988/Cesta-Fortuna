@@ -41,7 +41,7 @@ public class Cesta {
         // lógica de rangos de probabilidad 
         if ( tirada <= b ){
             return 'B' ;
-        } else if ( tirada <= b + a ){
+        } else if ( tirada == b + a ){
             return 'A' ; 
         } else {
             return 'N';

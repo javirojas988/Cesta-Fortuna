@@ -60,6 +60,7 @@ public class App {
             opcion = lecturaSegura("Elija una opción: ");
             System.out.println("---------------------------");
             switch (opcion) {
+                
                 case 1:
                     pasarTurno = true ;
                     bola = cesta.sacarBola();
@@ -91,7 +92,10 @@ public class App {
                     System.out.println("Elija una opción válida");
                     break;
             }
-
+            if ( cesta.getBolasAzules() == 0 && cesta.getBolasBlancas() == 0 ){
+                System.out.println("No quedan más bolas azules o blancas, has ganado, enhorabuena\n Has dejado el programa en banca rota");
+                plantarse = true; 
+            }
             if ( pasarTurno == true){
                 i++;
             }
